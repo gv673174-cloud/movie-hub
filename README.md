@@ -33,13 +33,13 @@
 <p>The website is designed to work across different screen sizes:</p>
 
 <ul> <li>💻 Desktop</li> <li>📱 Mobile</li> <li>📲 Tablet</li> </ul>
-  <h2>🚧 Future Improvements</h2>
-  <ul>
-    <li>🎥 Trailer preview</li>
-    <li>❤️ Watchlist feature</li>
-    <li>📊 Rating filter</li>
-    <li>🌙 Dark mode</li>
-  </ul>
+  <h2>🎯 Project Objective</h2>
+
+<p> The main objective of this project was to build a <strong>dynamic and responsive movie website</strong> while gaining practical experience in frontend development, backend development, database management, and connecting the frontend with the backend. </p>
+
+<h2>🔮 Future Improvements</h2>
+
+<ul> <li>User registration and login</li> <li>Movie ratings and reviews</li> <li>Watchlist functionality</li> <li>Movie trailers</li> <li>Advanced movie filtering</li> <li>Online movie streaming functionality</li> </ul>
 
   <h2>👨‍💻 Author</h2>
   <p><b>Gautam Verma</b><br>Frontend Developer</p>
