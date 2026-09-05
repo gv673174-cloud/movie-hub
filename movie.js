@@ -27,7 +27,7 @@ function searchItem() {
   items.forEach(item => {
 
     const text = item.textContent.toLowerCase();
-    console.log(text);
+    // console.log(text);
 
     if(text.includes(input)){
       item.style.display = " ";
