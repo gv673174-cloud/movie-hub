@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="movie.css">
+    <title>Moviehub</title>
 </head>
 <body>
      <!-- it is slider -->
   <div class="slider">
 <button class="prev" onclick="prevSlide()">❮</button>
-<img src="movie-poster\ironman.jpg" class="slide" >
-<img src="movie-poster\anaconda.jpg" class="slide">
-<img src="movie-poster\avenger.jpg" class="slide">
+<img src="img\ironman.jpg" class="slide" >
+<img src="img\anaconda.jpg" class="slide">
+<img src="img\avenger.jpg" class="slide">
 <button class="next" onclick="nextSlide()">❯</button>
 </div>
-  <h id="head">🎬 Movie Hub</h>
+  <h1 id="head">🎬 Movie Hub</h1>
    <!-- it is navbar -->
     <nav>
         <ul>
             <li onclick="filterMovies('all')">Movies</li>
-            <li onclick="filterMovies('bollywood')">Bollywood</li>
-            <li onclick="filterMovies('hollywood')">Hollywood</li>
+            <li onclick="filterMovies('Bollywood')">Bollywood</li>
+            <li onclick="filterMovies('Hollywood')">Hollywood</li>
             <li onclick="filterMovies('South')">South</li>
             <li onclick="filterMovies('Series')">Series</li>
             <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchItem()" >
@@ -29,78 +29,18 @@
     </nav>
     <!-- below all is movie content -->
     <main>
-        <div class="moviecontainer" data-category="hollywood">
-        <img class="im" src="movie-poster\avenger.jpg">
-        <h1 class="mar1">Avengers: Endgame</h1>
-        <p class="mar2">this movie release in 2019</p>
+        
+        <?php while($row = mysqli_fetch_assoc($result)){ ?>
+        <div class="moviecontainer" data-category='<?php echo $row['category'] ?>'  >
+        <a href="Backend/index.php?id=<?php echo $row['id'] ?>">
+        <img class="im" src="<?php echo $row['poster'] ?>">
+        </a>
+        <h1 class="mar1"><?php echo $row['name'] ?></h1>
+        <p class="mar2"><?php echo $row['date'] ?></p>
         </div>
-
-        <div class="moviecontainer" data-category="hollywood">
-        <img class="im" src="movie-poster\batman.jpg">
-        <h1 class="mar1">The Batman</h1>
-        <p class="mar2">2022 PG-13 2h 56m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="hollywood">
-        <img class="im" src="movie-poster\anaconda.jpg">
-        <h1 class="mar1">Anaconda</h1>
-        <p class="mar2">this movie release in 1989</p>
-        </div>
-
-        <div class="moviecontainer" data-category="hollywood">
-        <img class="im" src="movie-poster\ironman.jpg">
-        <h1 class="mar1">Iron Man</h1>
-        <p class="mar2">2008 PG-13 2h 6m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="bollywood">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\dhurandhar.jpg">
-        <h1 class="mar1">Dhurandhar</h1>
-        <p class="mar2">2025 3h 34m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="South">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\salaar.jpg">
-        <h1 class="mar1">Salaar</h1>
-        <p class="mar2">2023 2h 55m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="South">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\kgf-2.jpg">
-        <h1 class="mar1">K.G.F: Chapter 2</h1>
-        <p class="mar2">2022 2h 46m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="bollywood">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\animal.jpg">
-        <h1 class="mar1">Animal</h1>
-        <p class="mar2">2023 3h 24m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="Series">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\loki.jpg">
-        <h1 class="mar1">Loki</h1>
-        <p class="mar2">2021–2023 TV-14 50m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="Series">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\moon knight.jpg">
-        <h1 class="mar1">Moon Knight</h1>
-        <p class="mar2">2022 TV-14 50m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="bollywood">
-        <img  class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\malik.jpg">
-        <h1 class="mar1">Maalik</h1>
-        <p class="mar2">2025 2h 29m</p>
-        </div>
-
-        <div class="moviecontainer" data-category="South">
-        <img class="im" src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie-poster\pushpa.jpg">
-        <h1 class="mar1">Pushpa: Part 2</h1>
-        <p class="mar2">2024 3h 21m</p>
-        </div>  
+        <?php } ?>
+        
     </main>         
-<script src="C:\Users\User3\Desktop\GAUTAM\Web Developer\practice project\movies web\movie.js"></script>
+<script src="movie.js"></script>
 </body>
 </html>
