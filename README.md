@@ -19,18 +19,20 @@
   <h2>🛠️ Tech Stack</h2>
   <ul>
     <li><b>Frontend:</b> HTML, CSS, JavaScript</li>
+     <li><b>Backend:</b>PHP, MySQL </li>
     <li><b>Tools:</b> VS Code, Git, GitHub</li>
   </ul>
-  <h2>⚙️ Installation & Setup</h2>
-  <ol>
-    <li>Clone the repository</li>
-    <code>git clone https://github.com/your-username/movie-app.git</code>
+  <h2>⚙️ Installation</h2>
 
-    <li>Navigate to the project folder</li>
-    <code>cd movie-app</code>
+<ol> <li>Clone the repository.</li> <li>Move the project into your local server directory such as <strong>htdocs</strong>.</li> <li>Start <strong>Apache</strong> and <strong>MySQL</strong> using XAMPP.</li> <li>Create a MySQL database.</li> <li>Import the <strong>movie.sql</strong> database file.</li> <li>Update the database connection settings in the backend configuration file.</li> <li>Open the project in your browser.</li> </ol>
 
-    <li>Open <b>movie.html</b> in your browser</li>
-  </ol>
+<pre> http://localhost/movie-website/ </pre>
+
+<h2>📱 Responsive Design</h2>
+
+<p>The website is designed to work across different screen sizes:</p>
+
+<ul> <li>💻 Desktop</li> <li>📱 Mobile</li> <li>📲 Tablet</li> </ul>
   <h2>🚧 Future Improvements</h2>
   <ul>
     <li>🎥 Trailer preview</li>
