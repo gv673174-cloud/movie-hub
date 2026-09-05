@@ -39,7 +39,7 @@
 
 <h2>🔮 Future Improvements</h2>
 
-<ul> <li>User registration and login</li> <li>Movie ratings and reviews</li> <li>Watchlist functionality</li> <li>Movie trailers</li> <li>Advanced movie filtering</li> <li>Online movie streaming functionality</li> </ul>
+<ul> <li>User registration and login</li> <li>Movie ratings and reviews</li> <li>Watchlist functionality</li>  <li>Online movie streaming functionality</li> </ul>
 
   <h2>👨‍💻 Author</h2>
   <p><b>Gautam Verma</b><br>Frontend Developer</p>
