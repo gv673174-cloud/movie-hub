@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="movie-page.css" />
+    <title>Moviehub</title>
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        <a href="../index.php">Homepage</a>
+      </div>
+    </header>
+    <div id="moviedata">
+      <!-- name -->
+      <h1 id="name"><?php echo $row['name'] ?></h1>
+
+      <!-- poster -->
+      <div class="border">
+        <img src="<?php echo $row['poster'] ?>" id="poster" />
+      </div>
+
+      <!-- discription -->
+      <h2 class="heading">Storyline</h2>
+      <div class="border">
+        <p id="storyline"><?php echo $row['discription'] ?></p>
+      </div>
+
+      <!-- Extra details -->
+      <h2 class="heading">More Detail</h2>
+      <div class="border">
+        <p id="detail">
+          <b style="width: 30px; color: white"><?php echo $row['name'] ?></b>
+          <br />
+          <b style="color: blue">Category:</b>
+          <b style="width: 10px; color: white"
+            ><?php echo $row['category'] ?></b
+          >
+          <br />
+          <b style="color: blue"> Genres:</b>
+          <b style="width: 10px; color: white"><?php echo $row['genres'] ?></b>
+          <br />
+          <b style="color: blue"> IMDb:</b>
+          <b style="width: 10px; color: white"><?php echo $row['imdb'] ?></b>
+          <br />
+          <b style="color: blue">Release Date:</b>
+          <b style="width: 10px; color: white"><?php echo $row['date'] ?></b>
+        </p>
+      </div>
+
+      <!-- screenshot -->
+      <h2 class="heading">Screenshots</h2>
+      <div class="border">
+        <img src="<?php echo $row['screenshot'] ?>" id="screenshot" />
+      </div>
+
+      <!-- dwonload link -->
+      <h2 class="heading">Dwonload Links</h2>
+      <div class="border">
+        <a href="<?php echo $row['link'] ?> ?>">
+          <h2 class="link">720p HD PLUS</h2>
+        </a>
+      </div>
+
+      <!-- Tailor -->
+      <h2 class="heading">Trailor</h2>
+      <div class="border">
+        <iframe
+          id="trailor "
+          src="<?php echo $row['trailor'] ?>"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
